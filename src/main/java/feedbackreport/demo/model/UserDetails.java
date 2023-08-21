@@ -19,16 +19,16 @@ public class UserDetails {
     // @OneToMany
 //    @JoinColumn(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long user_id;
-    @Column(name = "user_name")
+    private long userid;
+    @Column(name = "username")
     private String username;
     @Column(name = "email")
     private String email;
     @Column(name = "phone")
     private long phone;
     @Column(name = "password")
-    private long password;
-    @Column(name = "user_type")
-    private String user_type;
+    private String password;
+    @Column(name = "usertype")
+    private String usertype;
 
 }

@@ -15,11 +15,13 @@ import lombok.Setter;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int question_id;
+    private long question_id;
     @Column(name = "question")
-    private String question;
+    private String[] question;
     @Column(name = "start_time")
     private long start_time;
     @Column(name = "end_time")
     private long end_time;
+
+
 }
