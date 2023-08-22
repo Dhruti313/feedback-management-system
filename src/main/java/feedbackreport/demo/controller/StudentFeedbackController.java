@@ -1,6 +1,7 @@
 package feedbackreport.demo.controller;
 
-import feedbackreport.demo.model.CourseInfo;
+import feedbackreport.demo.dto.FeedbackResponse;
+import feedbackreport.demo.dto.StudentFeedbackBody;
 import feedbackreport.demo.model.StudentFeedback;
 import feedbackreport.demo.repository.CourseInfoRepository;
 import feedbackreport.demo.repository.StudentFeedbackRepository;
@@ -33,6 +34,7 @@ public class StudentFeedbackController {
             studentFeedback.setCourse_id(courseId);
             studentFeedback.setQuestion_id(response.getQuestion_id());
             studentFeedback.setStatus(response.getStatus());
+            studentFeedback.setCreated_at(System.currentTimeMillis());
             // Save the feedback
             studentFeedbackRepository.save(studentFeedback);
         }

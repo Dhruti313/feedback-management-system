@@ -1,11 +1,11 @@
-package feedbackreport.demo.controller;
+package feedbackreport.demo.dto;
 
 import lombok.Data;
 
 @Data
 public class FeedbackResponse {
     private int question_id;
-    private String status;
+    private int status;
 
     // Constructors, getters, setters
 }

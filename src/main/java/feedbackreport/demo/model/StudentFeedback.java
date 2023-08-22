@@ -18,7 +18,7 @@ public class StudentFeedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int feedback_id;
     @Column(name = "status")
-    private String status;
+    private int status;
     //@OneToOne
     //@JoinColumn(name = "course_id")
     @Column(name = "course_id")
@@ -29,7 +29,6 @@ public class StudentFeedback {
     private long question_id;
 
     @Column(name = "created_at")
-    @CreationTimestamp
     private long created_at;
 
 }

@@ -1,4 +1,4 @@
-package feedbackreport.demo.controller;
+package feedbackreport.demo.dto;
 
 
 import lombok.Data;

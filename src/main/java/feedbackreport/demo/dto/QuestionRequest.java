@@ -1,10 +1,9 @@
-package feedbackreport.demo.controller;
+package feedbackreport.demo.dto;
 
-import feedbackreport.demo.model.CourseInfo;
 import lombok.Data;
 
 @Data
-public class QuestionRequestBody {
+public class QuestionRequest {
     private String[] question;
     private long startTime;
     private long endTime;

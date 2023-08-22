@@ -1,5 +1,6 @@
 package feedbackreport.demo.controller;
 
+import feedbackreport.demo.dto.QuestionRequest;
 import feedbackreport.demo.model.Question;
 import feedbackreport.demo.repository.CourseInfoRepository;
 import feedbackreport.demo.repository.QuestionRepository;
@@ -17,7 +18,7 @@ public class QuestionController {
     @Autowired
     private CourseInfoRepository courseInfoRepository;
     @PostMapping("/questions")
-    public ResponseEntity<String> insertQuestion(@RequestBody QuestionRequestBody requestBody ) {
+    public ResponseEntity<String> insertQuestion(@RequestBody QuestionRequest requestBody ) {
         String[] question = requestBody.getQuestion();
         long startTime = requestBody.getStartTime();
         long endTime = requestBody.getEndTime();
