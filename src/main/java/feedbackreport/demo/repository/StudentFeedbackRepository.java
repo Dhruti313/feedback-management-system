@@ -6,8 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 @Repository
-public interface StudentFeedbackRepository extends JpaRepository<StudentFeedback , Integer> {
+public interface StudentFeedbackRepository extends JpaRepository<StudentFeedback, Integer> {
     @Query(value = "SELECT course_id, course_name FROM course_info", nativeQuery = true)
     List<StudentFeedback> student_feedback_details();
 }

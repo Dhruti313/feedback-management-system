@@ -5,14 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="student_feedback")
+@Table(name = "student_feedback")
 public class StudentFeedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +22,9 @@ public class StudentFeedback {
     //@JoinColumn(name = "course_id")
     @Column(name = "course_id")
     private int course_id;
-   // @ManyToOne
+    // @ManyToOne
     //@JoinColumn(name = "question_id")
-   @Column(name = "question_id")
+    @Column(name = "question_id")
     private long question_id;
 
     @Column(name = "created_at")

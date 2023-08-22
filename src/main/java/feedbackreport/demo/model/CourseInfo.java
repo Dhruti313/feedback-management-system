@@ -17,8 +17,8 @@ public class CourseInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int course_id;
 
-//    @ManyToOne
-   // @JoinColumn(name = "user_id") // This establishes the foreign key relationship
+    //    @ManyToOne
+    // @JoinColumn(name = "user_id") // This establishes the foreign key relationship
     @Column(name = "user_id")
     private long user_id;
 
