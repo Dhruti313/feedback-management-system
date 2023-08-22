@@ -16,12 +16,18 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long question_id;
+
     @Column(name = "question")
-    private String[] question;
+    private String question;
     @Column(name = "start_time")
     private long start_time;
     @Column(name = "end_time")
     private long end_time;
+
+
+
+    @Column(name = "course_id")
+    private int courseInfo;
 
 
 }
