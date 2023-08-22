@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Getter
 @Setter
@@ -23,9 +24,6 @@ public class Question {
     private long start_time;
     @Column(name = "end_time")
     private long end_time;
-
-
-
     @Column(name = "course_id")
     private int courseInfo;
 

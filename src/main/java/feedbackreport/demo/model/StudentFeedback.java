@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Getter
 @Setter
@@ -18,15 +19,17 @@ public class StudentFeedback {
     private int feedback_id;
     @Column(name = "status")
     private String status;
-    @OneToOne
-    @JoinColumn(name = "course_id")
-//    @Column(name = "course_id")
-    private CourseInfo courseinfo;
-    @ManyToOne
-    @JoinColumn(name = "question_id")
-   // @Column(name = "question_id")
-    private Question question;
+    //@OneToOne
+    //@JoinColumn(name = "course_id")
+    @Column(name = "course_id")
+    private int course_id;
+   // @ManyToOne
+    //@JoinColumn(name = "question_id")
+   @Column(name = "question_id")
+    private long question_id;
+
     @Column(name = "created_at")
+    @CreationTimestamp
     private long created_at;
 
 }

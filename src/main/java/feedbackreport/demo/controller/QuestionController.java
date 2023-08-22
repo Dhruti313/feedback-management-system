@@ -1,6 +1,5 @@
 package feedbackreport.demo.controller;
 
-import feedbackreport.demo.model.CourseInfo;
 import feedbackreport.demo.model.Question;
 import feedbackreport.demo.repository.CourseInfoRepository;
 import feedbackreport.demo.repository.QuestionRepository;
@@ -9,10 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Arrays;
 
 @RestController
 public class QuestionController {
