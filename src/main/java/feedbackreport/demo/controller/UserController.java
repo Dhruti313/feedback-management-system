@@ -31,9 +31,9 @@ public class UserController {
         ObjectNode responseNode = mapper.createObjectNode();
 
         if (userExists) {
-            responseNode.put("status", "found");
+            responseNode.put("status", "success");
         } else {
-            responseNode.put("status", "not found");
+            responseNode.put("status", "failed");
         }
 
         responseNode.put("user_type", usertype);

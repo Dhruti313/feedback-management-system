@@ -1,5 +1,6 @@
 package feedbackreport.demo.controller;
 
+import feedbackreport.demo.dto.QuestionDetails;
 import feedbackreport.demo.dto.QuestionRequest;
 import feedbackreport.demo.model.Question;
 import feedbackreport.demo.repository.CourseInfoRepository;
@@ -7,18 +8,23 @@ import feedbackreport.demo.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @RestController
+@CrossOrigin("*")
 public class QuestionController {
     @Autowired
-    private  QuestionRepository questionRepository;
+    private QuestionRepository questionRepository;
     @Autowired
     private CourseInfoRepository courseInfoRepository;
+
     @PostMapping("/questions")
-    public ResponseEntity<String> insertQuestion(@RequestBody QuestionRequest requestBody ) {
+    public ResponseEntity<String> insertQuestion(@RequestBody QuestionRequest requestBody) {
         String[] question = requestBody.getQuestion();
         long startTime = requestBody.getStartTime();
         long endTime = requestBody.getEndTime();
@@ -26,7 +32,7 @@ public class QuestionController {
 
         boolean courseInfo = courseInfoRepository.findByCourseId(courseId); // Retrieve the CourseInfo entity
         System.out.println(courseId);
-        if (!courseInfo ) {
+        if (!courseInfo) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid course ID");
         }
 
@@ -36,10 +42,24 @@ public class QuestionController {
             newQuestion.setStart_time(startTime);
             newQuestion.setEnd_time(endTime);
             newQuestion.setCourseInfo(courseId);
-             questionRepository.save(newQuestion);
+            questionRepository.save(newQuestion);
         }
         return ResponseEntity.ok("Questions inserted successfully");
     }
 
 
+    @GetMapping("/getquestions")
+    public ResponseEntity<List<Map<String, Object>>> getQuestions(@RequestParam int course_id) {
+        List<Object[]> questionExists = questionRepository.findQuestionsWithinCurrentTimestampAndCourseId(System.currentTimeMillis(), course_id);
+
+        List<Map<String, Object>> responseList = new ArrayList<>();
+        for (Object[] result : questionExists) {
+            Map<String, Object> questionMap = new HashMap<>();
+            questionMap.put("question_id", result[0]);
+            questionMap.put("question", result[1]);
+            responseList.add(questionMap);
+        }
+
+        return ResponseEntity.ok(responseList);
+    }
 }
