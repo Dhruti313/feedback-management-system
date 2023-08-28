@@ -1,5 +1,7 @@
 package feedbackreport.demo.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import feedbackreport.demo.dto.QuestionDetails;
 import feedbackreport.demo.dto.QuestionRequest;
 import feedbackreport.demo.model.Question;
@@ -24,16 +26,19 @@ public class QuestionController {
     private CourseInfoRepository courseInfoRepository;
 
     @PostMapping("/questions")
-    public ResponseEntity<String> insertQuestion(@RequestBody QuestionRequest requestBody) {
+    public ResponseEntity<ObjectNode> insertQuestion(@RequestBody QuestionRequest requestBody) {
         String[] question = requestBody.getQuestion();
         long startTime = requestBody.getStartTime();
         long endTime = requestBody.getEndTime();
         int courseId = requestBody.getCourseInfo();
-
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode responseNode = mapper.createObjectNode();
         boolean courseInfo = courseInfoRepository.findByCourseId(courseId); // Retrieve the CourseInfo entity
-        System.out.println(courseId);
+
         if (!courseInfo) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid course ID");
+            responseNode.put("status", "error");
+            responseNode.put("message", "Invalid course ID");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseNode);
         }
 
         for (String questionText : question) {
@@ -44,12 +49,17 @@ public class QuestionController {
             newQuestion.setCourseInfo(courseId);
             questionRepository.save(newQuestion);
         }
-        return ResponseEntity.ok("Questions inserted successfully");
+
+        responseNode.put("status", "success");
+        responseNode.put("message", "Questions inserted successfully");
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseNode);
     }
 
 
     @GetMapping("/getquestions")
     public ResponseEntity<List<Map<String, Object>>> getQuestions(@RequestParam int course_id) {
+
         List<Object[]> questionExists = questionRepository.findQuestionsWithinCurrentTimestampAndCourseId(System.currentTimeMillis(), course_id);
 
         List<Map<String, Object>> responseList = new ArrayList<>();
