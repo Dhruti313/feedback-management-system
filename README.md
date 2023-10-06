@@ -66,16 +66,7 @@ To run this project locally, follow these steps:
 
 Feel free to contribute to this project by submitting bug reports, feature requests, or enhancements.
 
-## Contributors
+## Contributor
 
-- [Your Name]
-- [Team Member 1]
-- [Team Member 2]
+- Dhruti Vachhani
 
-## License
-
-This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-We would like to express our gratitude to [Organization Name] for their support and guidance throughout the development of this Feedback Management System.
