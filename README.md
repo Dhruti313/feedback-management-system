@@ -84,3 +84,30 @@ We welcome contributions to enhance this project. Please feel free to submit bug
 ## Contributor
 
 - Dhruti Vachhani
+
+## Screenshots
+- **Login page**
+  
+![login page](https://github.com/Dhruti313/feedback-management-system/assets/124250238/25a2bcfa-cdba-4f09-b07e-34f6b55aeab4)
+
+- **Course Details**
+
+![course_details](https://github.com/Dhruti313/feedback-management-system/assets/124250238/ca458994-2d61-4696-9ffe-1c715ab733d2)
+
+- **feedback page for student**
+
+![feedback_for_student](https://github.com/Dhruti313/feedback-management-system/assets/124250238/9e371976-3ace-464b-8a61-547fd22f2e69)
+
+- **Feedback submitted Succesfully**
+
+![student_feedback](https://github.com/Dhruti313/feedback-management-system/assets/124250238/ff8b0cbc-20ea-4193-81e2-ed592d608776)
+
+- **Create Survey for Admin**
+
+![create_survey](https://github.com/Dhruti313/feedback-management-system/assets/124250238/226c90f6-248e-4466-be55-a5131644efeb)
+
+
+- **Feedback status of Admin for particular course**
+
+![feedback_status](https://github.com/Dhruti313/feedback-management-system/assets/124250238/413de25f-3d14-4abc-94b4-6203b465c13d)
+
