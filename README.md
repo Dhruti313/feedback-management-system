@@ -88,26 +88,27 @@ We welcome contributions to enhance this project. Please feel free to submit bug
 ## Screenshots
 - **Login page**
   
-![login page](https://github.com/Dhruti313/feedback-management-system/assets/124250238/25a2bcfa-cdba-4f09-b07e-34f6b55aeab4)
+![login page](https://github.com/Dhruti313/feedback-management-system/assets/124250238/e313c1b4-9811-485b-b96b-8bccfcd5149f)
+
 
 - **Course Details**
 
-![course_details](https://github.com/Dhruti313/feedback-management-system/assets/124250238/ca458994-2d61-4696-9ffe-1c715ab733d2)
+![course_details](https://github.com/Dhruti313/feedback-management-system/assets/124250238/23de3624-84f5-4bc1-bbe2-b07b040b2175)
+
 
 - **feedback page for student**
 
-![feedback_for_student](https://github.com/Dhruti313/feedback-management-system/assets/124250238/9e371976-3ace-464b-8a61-547fd22f2e69)
+![feedback_for_student](https://github.com/Dhruti313/feedback-management-system/assets/124250238/5905dcdd-606a-41c0-9e30-6d1db165564d)
 
-- **Feedback submitted Succesfully**
-
-![student_feedback](https://github.com/Dhruti313/feedback-management-system/assets/124250238/ff8b0cbc-20ea-4193-81e2-ed592d608776)
 
 - **Create Survey for Admin**
 
-![create_survey](https://github.com/Dhruti313/feedback-management-system/assets/124250238/226c90f6-248e-4466-be55-a5131644efeb)
+![create_survey](https://github.com/Dhruti313/feedback-management-system/assets/124250238/d532b3c5-936d-4506-bd05-2eea47ef4a14)
 
 
 - **Feedback status of Admin for particular course**
 
-![feedback_status](https://github.com/Dhruti313/feedback-management-system/assets/124250238/413de25f-3d14-4abc-94b4-6203b465c13d)
+  
+![feedback_status](https://github.com/Dhruti313/feedback-management-system/assets/124250238/5f3072f6-4d9d-4ae4-a3e5-0153a02604b1)
+
 
