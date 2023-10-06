@@ -1,72 +1,77 @@
 # Feedback Management System
 
-## Description
+## Overview
 
-The Feedback Management System is a comprehensive tool designed to efficiently track and manage student records while assessing faculty performance based on feedback provided by students. This system was developed using cutting-edge technologies and frameworks to ensure its effectiveness and user-friendliness.
+The **Feedback Management System** is a sophisticated and intuitive tool engineered to efficiently monitor and manage student records while assessing faculty performance based on comprehensive feedback provided by students. This project leverages cutting-edge technologies and frameworks to deliver a powerful and user-friendly solution.
 
-### Technologies Used
+## Technologies Utilized
 
-- **Spring Boot**: We utilized the Spring Boot framework as the core application framework, providing a robust and scalable backend.
+- **Spring Boot**: As the cornerstone of our application, Spring Boot offers a robust and scalable backend framework.
 
-- **Lombok Library**: Lombok was used to streamline backend development, making the code more concise and readable.
+- **Lombok Library**: Lombok was employed to enhance backend development, leading to cleaner and more concise code.
 
-- **Hibernate ORM**: Hibernate played a crucial role in managing the connection between our application and the database, ensuring data integrity and efficient data retrieval.
+- **Hibernate ORM**: Hibernate serves as the linchpin connecting our application seamlessly with the database, ensuring data integrity and efficient data retrieval.
 
-- **React, HTML, and CSS**: These frontend technologies were employed to create a user-friendly and intuitive interface for both students and faculty members.
+- **Frontend Technologies**: To deliver an exceptional user experience, we harnessed the capabilities of React, HTML, and CSS for the frontend.
 
-- **IntelliJ (Backend) and Visual Studio Code (Frontend)**: These development platforms were chosen to maximize productivity and code quality in both backend and frontend development.
+- **Development Environments**: We chose IntelliJ for the backend and Visual Studio Code for the frontend, enabling us to maximize productivity and maintain code quality.
 
-- **Postman**: For testing purposes, Postman was used to make API calls and verify the storage of data in the backend.
+- **Testing with Postman**: Postman was employed for rigorous testing, allowing us to make API calls and validate data storage in the backend.
 
-### User Roles
+## User Roles
 
-- **Faculty (Admin)**: Faculty members have administrative privileges, allowing them to add, create, and update data. They can also view the overall performance of courses.
+### Faculty (Admin)
 
-- **Student**: Students are provided with unique usernames and passwords by the organization. After logging in, they can give feedback for various courses and view their own feedback status.
+- Faculty members possess administrative privileges, enabling them to add, create, and update data. They also have access to comprehensive insights into course performance.
 
-### Functionality
+### Student
 
-#### For Students:
+- Students are granted unique usernames and passwords by the organization. After successful login, they can provide feedback for various courses and view their personal feedback status.
 
-- Upon successful login, students are directed to the feedback page, where they can choose a course and provide their feedback.
+## Key Features
 
-- If a student has already submitted feedback for a particular course, they will receive a notification indicating that they can only view their feedback status.
+### For Students:
 
-#### For Faculty (Admins):
+- Upon login, students are directed to the feedback page where they can select a course and submit their feedback.
 
-- Faculty members can log in and access the feedback status page, which provides an overview of course performance categorized as poor, good, average, or excellent.
+- If a student has previously submitted feedback for a particular course, they will receive a notification, allowing them to view their feedback status.
 
-- Faculty members have the capability to create surveys. When creating a survey, they must provide course name, branch name, start date, end date, and questions to be included in the survey.
+### For Faculty (Admins):
 
-### Project Objectives
+- Faculty members have access to the feedback status page, providing an overview of course performance categorized as poor, good, average, or excellent.
 
-The primary objective of this project is to develop an efficient and user-friendly Student Feedback Report System. This system enables:
+- Faculty members can create surveys, requiring course name, branch name, start date, end date, and questions for inclusion.
 
-- Systematic collection of feedback data from students.
+## Project Objectives
 
-- In-depth analysis of feedback data.
+The primary project objectives are as follows:
 
-- Generation of insightful reports based on the collected data.
+1. **Efficiency**: Develop an efficient system for systematic data collection and analysis of student feedback.
 
-### How to Run
+2. **User-Friendly**: Create an intuitive and user-friendly interface for both students and faculty members.
+
+3. **Insightful Reports**: Generate insightful reports based on the collected feedback data to assess faculty performance.
+
+## Getting Started
 
 To run this project locally, follow these steps:
 
 1. Clone the repository to your local machine.
 
-2. Set up the backend using IntelliJ and the frontend using Visual Studio Code.
+2. Configure the backend application using IntelliJ and the frontend using Visual Studio Code.
 
-3. Configure the database connection details in the backend application.
+3. Provide the necessary database connection details in the backend application.
 
-4. Install the necessary dependencies for both the frontend and backend.
+4. Install required dependencies for both the frontend and backend.
 
-5. Run the Spring Boot application for the backend and the React application for the frontend.
+5. Launch the Spring Boot application for the backend and the React application for the frontend.
 
-6. Access the system by opening a web browser and navigating to the appropriate URL.
+6. Access the system through a web browser by navigating to the appropriate URL.
 
-Feel free to contribute to this project by submitting bug reports, feature requests, or enhancements.
+## Contributions
+
+We welcome contributions to enhance this project. Please feel free to submit bug reports, feature requests, or improvements.
 
 ## Contributor
 
 - Dhruti Vachhani
-
