@@ -18,6 +18,15 @@ The **Feedback Management System** is a sophisticated and intuitive tool enginee
 
 - **Testing with Postman**: Postman was employed for rigorous testing, allowing us to make API calls and validate data storage in the backend.
 
+## Other Development Software
+- **Operating System**: Windows 11 provides a stable and familiar environment for development.
+
+- **Documentation**: MS Office and Google Docs are employed for generating reports and other essential documents.
+
+- **Diagrams**: Lucidchart and erdplus are utilized for creating diagrams to enhance system understanding.
+
+- **Server Stack**: XAMPP server, a free and open-source cross-platform web server solution stack package, is deployed. It consists primarily of the Apache HTTP Server, MariaDB database and interpreters for Java programming languages.
+
 ## User Roles
 
 ### Faculty (Admin)
